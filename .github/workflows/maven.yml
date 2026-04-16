@@ -21,6 +21,6 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Exceute Tests
-      run: mvn clean test -Dsuite=suite -X
+      run: mvn clean test -Dsuite=testng -X
 
   
