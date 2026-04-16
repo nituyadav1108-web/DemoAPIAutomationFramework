@@ -7,7 +7,7 @@ on:
   pull_request:
     branches: [ "master" ]
   schedule:
-    - cron: 00 13 * * *
+    - cron: 00 14 * * *
     
 
 jobs:
@@ -26,8 +26,8 @@ jobs:
     - name: Exceute Tests
       run: mvn clean test -Dsuite=testng -X
       
-    - name: Download a Build Artifact
-      uses: actions/download-artifact@v3.1.0
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v7.0.1
       with:
         name: log
         path: logs/
